@@ -9,7 +9,7 @@ class NavScreen extends StatefulWidget {
 
 class _NavScreenState extends State<NavScreen> {
   final List<Widget> _screens = [
-    const HomeScreen(),
+    HomeScreen(),
     const Scaffold(),
     const Scaffold(),
     const Scaffold(),
@@ -30,6 +30,7 @@ class _NavScreenState extends State<NavScreen> {
     return DefaultTabController(
       length: _icons.length,
       child: Scaffold(
+        extendBody: true,
         body: IndexedStack(
           index: _selectedIndex,
           children: _screens,
