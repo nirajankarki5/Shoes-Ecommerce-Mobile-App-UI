@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shoes_ecommerce/screens/home_screen.dart';
+import 'package:shoes_ecommerce/screens/my_bag_screen.dart';
 import 'package:shoes_ecommerce/widgets/custom_tab_bar.dart';
 
 class NavScreen extends StatefulWidget {
@@ -12,7 +13,7 @@ class _NavScreenState extends State<NavScreen> {
     const HomeScreen(),
     const Scaffold(),
     const Scaffold(),
-    const Scaffold(),
+    const MyBagScreen(),
     const Scaffold(),
   ];
   final List<IconData> _icons = [
