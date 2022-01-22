@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:shoes_ecommerce/models/shoes_model.dart';
 import 'package:shoes_ecommerce/utils/colors.dart';
+import 'package:shoes_ecommerce/widgets/product_card.dart';
 import 'package:shoes_ecommerce/widgets/search_bar.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -11,7 +13,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int index = 0;
-  late int currentIndex;
   List<String> brand = ["Nike", "Adidas", "Puma", "Balenciaga", "Converse"];
 
   @override
@@ -22,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: ListView(
           children: [
-            Container(
+            SizedBox(
               height: 60,
               // color: Colors.yellow,
               child: Row(
@@ -78,6 +79,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   .toList(),
             ),
             const SizedBox(height: 30),
+            GridView.builder(
+                shrinkWrap: true,
+                physics: const ScrollPhysics(),
+                gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                    maxCrossAxisExtent: 200,
+                    childAspectRatio: 9 / 10,
+                    crossAxisSpacing: 20,
+                    mainAxisSpacing: 20),
+                itemCount: shoesList.length,
+                itemBuilder: (BuildContext ctx, index) {
+                  return ProductCard(shoes: shoesList[index]);
+                }),
           ],
         ),
       ),
