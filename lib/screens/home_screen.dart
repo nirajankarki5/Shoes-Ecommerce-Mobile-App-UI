@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 physics: const ScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                     maxCrossAxisExtent: 200,
-                    childAspectRatio: 9 / 10,
+                    childAspectRatio: 7 / 8,
                     crossAxisSpacing: 20,
                     mainAxisSpacing: 20),
                 itemCount: shoesList.length,
