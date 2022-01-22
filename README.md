@@ -1,6 +1,12 @@
-# shoes_ecommerce
+# Shoes Ecommerce Mobile App UI
 
 A new Flutter project.
+
+## Screenshots
+
+<img src="screenshots/screenshot.png">
+
+- Design Inspiration: https://dribbble.com/shots/14065227-Shoes-Retail-Mobile-App
 
 ## Getting Started
 
